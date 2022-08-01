@@ -1,10 +1,10 @@
 # Dom Array Methods
 
-* This project is made by using JavaScript and for practice some array methods like reduce, sort, filter, forEach and async and await etc.
+## This project is made by using JavaScript and for practice some array methods like reduce, sort, filter, forEach and async and await etc.
 
-* In this project I used http://randomuser.me/api which you can take random people to your array and use that for practice.
+### In this project I used http://randomuser.me/api which you can take random people to your array and use that for practice.
 
-* In project there are five different buttons which they are,
+#### In project there are five different buttons which they are,
 
 * Add User(I used push() method to add user into array)
 * Double Money(I used map() method to double each user's money)
