@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+:root {
+    --modal-duration: 1s;
+    --primary-color: #30336b;
+    --secondary-color: #ff9b47;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+body.show-nav {
+    transform: translateX(200px);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    border-right: 2px solid rgba(200,200, 200, 0.1);
+    color: #fff;
+    width: 200px;
+    transform: translateX(-100%);
+    height: 100vh;
+    z-index: 100;
+}
+
+nav .logo {
+    padding: 30px 0;
+    text-align: center; 
+}
+
+nav .logo img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 20px;
+    border-bottom: 2px solid rgba(200,200, 200, 0.1)
+}
+nav ul li:first-of-type {
+    border-top: 2px solid rgba(200,200, 200, 0.1)
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background: var(--primary-color);
+    position: relative;
+    padding: 40px 15px;
+    text-align:  center;
+    color: #fff;
+    font-size: 130%;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    padding: 30px 0;
+}
+
+button,
+input[type=submit] {
+    border: 0;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+button:focus {
+    outline: none;
+}
+
+.toggle {
+    background-color: rgba(0,0, 0, 0.4);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.container {
+    padding: 15px;
+    width: 800px;
+    max-width: 100%;
+    margin:0 auto;
+}
+
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.modal-container.show-modal {
+    display: block;
+}
+
+.modal {
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    max-width: 100%;
+    width: 400px;
+    animation-name: modalanimation;
+    animation-duration: var(--modal-duration);
+}
+
+.modal-header {
+    background-color: var(--primary-color);
+    padding: 15px;
+    color: #fff;
+}
+
+.modal-header h3 {
+    border-bottom: 1px solid #333;
+    margin: 0;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.modal-form div {
+    margin: 20px 0;
+}
+
+.modal-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-form .form-input {
+    padding: 8px;
+    width: 100%;
+}
+
+.close-btn {
+    background: transparent;
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@keyframes modalanimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
